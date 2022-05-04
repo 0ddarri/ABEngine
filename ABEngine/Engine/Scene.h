@@ -12,8 +12,12 @@ public:
 	wstring name;
 
 	virtual void Init();
-	virtual void Update();
+	virtual void Update(float deltaTime);
 	virtual void Render();
 	virtual void Exit() PURE;
+
+	void AddObj(GameObject* obj);
+
+
 };
 

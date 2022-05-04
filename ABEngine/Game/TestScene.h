@@ -1,5 +1,6 @@
 #pragma once
 #include "../Engine/Scene.h"
+#include "../Engine/GameObject.h"
 
 class TestScene final : public Scene
 {
@@ -8,8 +9,10 @@ public:
 	TestScene(wstring n);
 
 	void Init() override;
-	void Update() override;
+	void Update(float deltaTime) override;
 	void Render() override;
 	void Exit() override;
+
+	GameObject* testObject;
 };
 

@@ -20,7 +20,7 @@ HRESULT CALLBACK OnD3D9ResetDevice( IDirect3DDevice9* pd3dDevice, const D3DSURFA
 // 프레임마다 실행
 void CALLBACK OnFrameMove( double fTime, float fElapsedTime, void* pUserContext )
 {
-    SceneManager::Instance()->GetCurrentScene()->Update();
+    SceneManager::Instance()->GetCurrentScene()->Update(fElapsedTime);
     // Update
 }
 
