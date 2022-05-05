@@ -54,6 +54,18 @@
     <Filter Include="Engine\1Components\1Transform">
       <UniqueIdentifier>{7e10af56-e7bd-4d2b-88e9-3a36c2b22c02}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Engine\1Components\2MeshRenderer">
+      <UniqueIdentifier>{fc2f0b8d-83db-4c0b-b840-37d3bc792aad}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\1Components\2MeshRenderer\0Mesh">
+      <UniqueIdentifier>{519005cc-a5f3-4bee-93c7-e8d27688411f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\5Material">
+      <UniqueIdentifier>{f7615663-be86-4905-9c02-f0904bb8b37c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\5Material\0Material">
+      <UniqueIdentifier>{25f4cf63-0f3c-4e0e-937f-ef54cb4db9e6}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <None Include="DXUT\Optional\directx.ico">
@@ -137,6 +149,15 @@
     <ClCompile Include="Engine\Transform.cpp">
       <Filter>Engine\1Components\1Transform</Filter>
     </ClCompile>
+    <ClCompile Include="Engine\MeshRenderer.cpp">
+      <Filter>Engine\1Components\2MeshRenderer</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine\Mesh.cpp">
+      <Filter>Engine\1Components\2MeshRenderer\0Mesh</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine\Materials\Material.cpp">
+      <Filter>Engine\5Material\0Material</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <CLInclude Include="resource.h">
@@ -165,6 +186,15 @@
     </ClInclude>
     <ClInclude Include="Engine\Transform.h">
       <Filter>Engine\1Components\1Transform</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\MeshRenderer.h">
+      <Filter>Engine\1Components\2MeshRenderer</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\Mesh.h">
+      <Filter>Engine\1Components\2MeshRenderer\0Mesh</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\Materials\Material.h">
+      <Filter>Engine\5Material\0Material</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

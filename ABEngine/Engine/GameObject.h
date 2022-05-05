@@ -8,7 +8,7 @@ private:
 	list<Component*> componentlist;
 protected:
 public:
-	GameObject() {};
+	GameObject();
 
 	virtual void Init();
 	virtual void Update(float deltaTime);
@@ -19,5 +19,7 @@ public:
 	Component* GetComp(Component* comp);
 
 	GameObject* parent = nullptr;
+
+	Transform* tranform;
 };
 

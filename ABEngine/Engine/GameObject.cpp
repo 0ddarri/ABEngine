@@ -1,6 +1,12 @@
 #include "DXUT.h"
 #include "GameObject.h"
 
+GameObject::GameObject()
+{
+	tranform = new Transform();
+	componentlist.push_back(tranform);
+}
+
 void GameObject::Init()
 {
 	for (Component* it : componentlist)

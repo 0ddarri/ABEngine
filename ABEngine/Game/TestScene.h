@@ -1,6 +1,7 @@
 #pragma once
 #include "../Engine/Scene.h"
 #include "../Engine/GameObject.h"
+#include "../Engine/MeshRenderer.h"
 
 class TestScene final : public Scene
 {
@@ -14,5 +15,6 @@ public:
 	void Exit() override;
 
 	GameObject* testObject;
+	GameObject* testObject2;
 };
 

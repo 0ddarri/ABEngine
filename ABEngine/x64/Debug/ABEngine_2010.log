@@ -1,7 +1,2 @@
-﻿  ABEngine.cpp
-  GameObject.cpp
-  Scene.cpp
-  SceneManager.cpp
-  TestScene.cpp
-  코드를 생성하고 있습니다...
+﻿  MeshRenderer.cpp
   ABEngine_2010.vcxproj -> D:\DirectX9_Projects\ABEngine\ABEngine\x64\Debug\ABEngine.exe

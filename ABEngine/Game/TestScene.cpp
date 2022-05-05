@@ -12,8 +12,12 @@ void TestScene::Init()
 	cout << "Init" << endl;
 
 	testObject = new GameObject();
-	testObject->AddComp(new Transform);
+	//testObject->AddComp(new Transform);
 	AddObj(testObject);
+	testObject2 = new GameObject();
+	testObject2->AddComp(new MeshRenderer(L"asdf"));
+	AddObj(testObject2);
+
 }
 
 void TestScene::Update(float deltaTime)
@@ -21,6 +25,9 @@ void TestScene::Update(float deltaTime)
 	Scene::Update(deltaTime);
 	//if (testObject->GetComp(new Transform)->name == L"Transform")
 	//	cout << "¾ßÈ£" << endl;
+
+	//testObject2->tranform->position->x -= deltaTime;
+	//testObject->tranform->position->x += deltaTime;
 }
 
 void TestScene::Render()
