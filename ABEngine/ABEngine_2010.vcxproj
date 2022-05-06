@@ -386,7 +386,9 @@
   <ItemGroup>
     <ClCompile Include="Engine\Component.cpp" />
     <ClCompile Include="Engine\GameObject.cpp" />
+    <ClCompile Include="Engine\Materials\ColorMat.cpp" />
     <ClCompile Include="Engine\Materials\Material.cpp" />
+    <ClCompile Include="Engine\Materials\MaterialManager.cpp" />
     <ClCompile Include="Engine\Mesh.cpp" />
     <ClCompile Include="Engine\MeshRenderer.cpp" />
     <ClCompile Include="Engine\Scene.cpp" />
@@ -424,7 +426,9 @@
   <ItemGroup>
     <ClInclude Include="Engine\Component.h" />
     <ClInclude Include="Engine\GameObject.h" />
+    <ClInclude Include="Engine\Materials\ColorMat.h" />
     <ClInclude Include="Engine\Materials\Material.h" />
+    <ClInclude Include="Engine\Materials\MaterialManager.h" />
     <ClInclude Include="Engine\Mesh.h" />
     <ClInclude Include="Engine\MeshRenderer.h" />
     <ClInclude Include="Engine\Scene.h" />

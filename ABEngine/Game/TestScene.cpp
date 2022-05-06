@@ -15,7 +15,7 @@ void TestScene::Init()
 	//testObject->AddComp(new Transform);
 	AddObj(testObject);
 	testObject2 = new GameObject();
-	testObject2->AddComp(new MeshRenderer(L"asdf"));
+	testObject2->AddComp(new MeshRenderer(L"Resources/Mesh/SphereWithTangent.x", L"ColorMaterial"));
 	AddObj(testObject2);
 
 }

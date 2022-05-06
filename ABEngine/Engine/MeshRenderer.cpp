@@ -5,15 +5,19 @@ MeshRenderer::MeshRenderer()
 {
 	name = L"MeshRenderer";
 	mesh = new Mesh();
+	material = MaterialManager::Instance()->GetMaterial(L"ColorMaterial");
 }
 
-MeshRenderer::MeshRenderer(wstring path)
+MeshRenderer::MeshRenderer(wstring path, wstring matName)
 {
+	name = L"MeshRenderer";
 	mesh = new Mesh(path);
+	material = MaterialManager::Instance()->GetMaterial(matName);
 }
 
-void MeshRenderer::Init()
+void MeshRenderer::Init(GameObject* p)
 {
+	Component::Init(p);
 }
 
 void MeshRenderer::Update(float deltaTime)
@@ -22,7 +26,7 @@ void MeshRenderer::Update(float deltaTime)
 
 void MeshRenderer::Render()
 {
-	mesh->mesh->DrawSubset(0);
+	material->Render(this);
 }
 
 void MeshRenderer::Exit()

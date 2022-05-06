@@ -1,8 +1,9 @@
 #include "DXUT.h"
 #include "Component.h"
 
-void Component::Init()
+void Component::Init(GameObject* p)
 {
+	parent = p;
 }
 
 void Component::Update(float deltaTime)

@@ -66,6 +66,12 @@
     <Filter Include="Engine\5Material\0Material">
       <UniqueIdentifier>{25f4cf63-0f3c-4e0e-937f-ef54cb4db9e6}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Engine\5Material\1ColorMat">
+      <UniqueIdentifier>{9d5f6bbd-c708-4ded-8070-5d4828f2d973}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\4Manager\1MaterialManager">
+      <UniqueIdentifier>{a7025159-2bc8-497a-8445-7e0a4f7fcd15}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <None Include="DXUT\Optional\directx.ico">
@@ -158,6 +164,12 @@
     <ClCompile Include="Engine\Materials\Material.cpp">
       <Filter>Engine\5Material\0Material</Filter>
     </ClCompile>
+    <ClCompile Include="Engine\Materials\ColorMat.cpp">
+      <Filter>Engine\5Material\1ColorMat</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine\Materials\MaterialManager.cpp">
+      <Filter>Engine\4Manager\1MaterialManager</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <CLInclude Include="resource.h">
@@ -195,6 +207,12 @@
     </ClInclude>
     <ClInclude Include="Engine\Materials\Material.h">
       <Filter>Engine\5Material\0Material</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\Materials\ColorMat.h">
+      <Filter>Engine\5Material\1ColorMat</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\Materials\MaterialManager.h">
+      <Filter>Engine\4Manager\1MaterialManager</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

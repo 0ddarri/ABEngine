@@ -20,6 +20,6 @@ public:
 
 	GameObject* parent = nullptr;
 
-	Transform* tranform;
+	Transform* transform;
 };
 

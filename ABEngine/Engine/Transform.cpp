@@ -17,8 +17,9 @@ Transform::Transform(const D3DXVECTOR3 pos, const D3DXVECTOR3 rot, const D3DXVEC
 	*scale = s;
 }
 
-void Transform::Init()
+void Transform::Init(GameObject* p)
 {
+	Component::Init(p);
 }
 
 void Transform::Update(float deltaTime)

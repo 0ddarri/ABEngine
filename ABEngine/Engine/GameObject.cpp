@@ -3,15 +3,15 @@
 
 GameObject::GameObject()
 {
-	tranform = new Transform();
-	componentlist.push_back(tranform);
+	transform = new Transform();
+	AddComp(transform);
 }
 
 void GameObject::Init()
 {
 	for (Component* it : componentlist)
 	{
-		it->Init();
+		it->Init(this);
 	}
 }
 
@@ -50,7 +50,7 @@ void GameObject::AddComp(Component* comp)
 			return;
 		}
 	}
-	comp->Init();
+	comp->Init(this);
 	componentlist.push_back(comp);
 }
 

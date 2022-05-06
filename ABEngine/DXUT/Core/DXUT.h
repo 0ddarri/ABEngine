@@ -357,6 +357,12 @@ using namespace std;
 
 #define DEVICE DXUTGetD3D9Device()
 
+#define PI           3.14159265f
+#define FOV          (PI/4.0f)							// 시야각
+#define ASPECT_RATIO ((float)SCW/(float)SCH)		// 화면의 종횡비
+#define NEAR_PLANE   1									// 근접 평면
+#define FAR_PLANE    10000								// 원거리 평면
+
 const int SCW = 1280;
 const int SCH = 720;
 

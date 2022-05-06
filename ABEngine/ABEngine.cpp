@@ -1,12 +1,14 @@
 #include "DXUT.h"
 #include "resource.h"
 #include "Engine/SceneManager.h"
+#include "Engine/Materials/MaterialManager.h"
 
 // 시작할 때 한번 실행
 HRESULT CALLBACK OnD3D9CreateDevice( IDirect3DDevice9* pd3dDevice, const D3DSURFACE_DESC* pBackBufferSurfaceDesc, void* pUserContext )
 {
     cout << "Create Device" << endl;
     SceneManager::Instance()->Initialize();
+    MaterialManager::Instance()->Initialize();
     return S_OK;
 }
 
@@ -61,6 +63,7 @@ void CALLBACK OnD3D9LostDevice( void* pUserContext )
 void CALLBACK OnD3D9DestroyDevice( void* pUserContext )
 {
     SceneManager::Instance()->GetCurrentScene()->Exit();
+    MaterialManager::Instance()->Exit();
     cout << "Destroy Device" << endl;
 }
 

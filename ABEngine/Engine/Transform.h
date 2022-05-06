@@ -12,7 +12,7 @@ public:
 	Transform();
 	Transform(const D3DXVECTOR3 pos, const D3DXVECTOR3 rot, const D3DXVECTOR3 s);
 
-	virtual void Init();
+	virtual void Init(GameObject* p);
 	virtual void Update(float deltaTime);
 	virtual void Render();
 	virtual void Exit();
