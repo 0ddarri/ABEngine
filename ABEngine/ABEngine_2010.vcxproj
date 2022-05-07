@@ -384,6 +384,8 @@
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Engine\Camera.cpp" />
+    <ClCompile Include="Engine\CameraManager.cpp" />
     <ClCompile Include="Engine\Component.cpp" />
     <ClCompile Include="Engine\GameObject.cpp" />
     <ClCompile Include="Engine\Materials\ColorMat.cpp" />
@@ -424,6 +426,8 @@
   <ItemGroup>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Engine\Camera.h" />
+    <ClInclude Include="Engine\CameraManager.h" />
     <ClInclude Include="Engine\Component.h" />
     <ClInclude Include="Engine\GameObject.h" />
     <ClInclude Include="Engine\Materials\ColorMat.h" />

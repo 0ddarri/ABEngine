@@ -2,6 +2,8 @@
 #include "../Engine/Scene.h"
 #include "../Engine/GameObject.h"
 #include "../Engine/MeshRenderer.h"
+#include "../Engine/Camera.h"
+#include "../Engine/CameraManager.h"
 
 class TestScene final : public Scene
 {
@@ -14,7 +16,8 @@ public:
 	void Render() override;
 	void Exit() override;
 
-	GameObject* testObject;
+	GameObject* testCam1;
+	GameObject* testCam2;
 	GameObject* testObject2;
 };
 

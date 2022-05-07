@@ -72,6 +72,12 @@
     <Filter Include="Engine\4Manager\1MaterialManager">
       <UniqueIdentifier>{a7025159-2bc8-497a-8445-7e0a4f7fcd15}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Engine\1Components\3Camera">
+      <UniqueIdentifier>{73488c6c-aa07-44b4-b84a-0496ad83fb1d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\4Manager\2CameraManager">
+      <UniqueIdentifier>{6c43c68e-7214-4bb4-82cd-5e12570b1cc2}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <None Include="DXUT\Optional\directx.ico">
@@ -170,6 +176,12 @@
     <ClCompile Include="Engine\Materials\MaterialManager.cpp">
       <Filter>Engine\4Manager\1MaterialManager</Filter>
     </ClCompile>
+    <ClCompile Include="Engine\Camera.cpp">
+      <Filter>Engine\1Components\3Camera</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine\CameraManager.cpp">
+      <Filter>Engine\4Manager\2CameraManager</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <CLInclude Include="resource.h">
@@ -213,6 +225,12 @@
     </ClInclude>
     <ClInclude Include="Engine\Materials\MaterialManager.h">
       <Filter>Engine\4Manager\1MaterialManager</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\Camera.h">
+      <Filter>Engine\1Components\3Camera</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\CameraManager.h">
+      <Filter>Engine\4Manager\2CameraManager</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

@@ -25,22 +25,13 @@ void ColorMat::Init()
 
 void ColorMat::Render(MeshRenderer* m)
 {
-	D3DXMATRIXA16 viewMat;
-	//DEVICE->GetTransform(D3DTS_VIEW, &viewMat);
-	D3DXVECTOR3 vEyePt(0.0f, 0.0f, -200.0f);
-	D3DXVECTOR3 vLookatPt(0.0f, 0.0f, 0.0f);
-	D3DXVECTOR3 vUpVec(0.0f, 1.0f, 0.0f);
-	D3DXMatrixLookAtLH(&viewMat, &vEyePt, &vLookatPt, &vUpVec);
+	world = m->parent->transform->GetWorldMatrix();
+	view = CameraManager::Instance()->GetCurCamera()->viewMat;
+	proj = CameraManager::Instance()->GetCurCamera()->projMat;
 
-	D3DXMATRIXA16 projMat;
-	//DEVICE->GetTransform(D3DTS_PROJ, &projMat);
-	D3DXMatrixPerspectiveFovLH(&projMat, FOV, ASPECT_RATIO, NEAR_PLANE, FAR_PLANE);
-
-	D3DXMATRIXA16 worldMat = m->parent->transform->GetWorldMatrix();
-
-	shader->SetMatrix((D3DXHANDLE)"gWorldMatrix", &worldMat);
-	shader->SetMatrix((D3DXHANDLE)"gViewMatrix", &viewMat);
-	shader->SetMatrix((D3DXHANDLE)"gProjectionMatrix", &projMat);
+	shader->SetMatrix((D3DXHANDLE)"gWorldMatrix", &world);
+	shader->SetMatrix((D3DXHANDLE)"gViewMatrix", &view);
+	shader->SetMatrix((D3DXHANDLE)"gProjectionMatrix", &proj);
 
 	UINT numPass = 0;
 	shader->Begin(&numPass, NULL);
