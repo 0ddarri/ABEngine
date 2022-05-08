@@ -33,9 +33,6 @@
     <Filter Include="Util">
       <UniqueIdentifier>{3e8e22f7-815d-4221-91f5-7f79831c4d95}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Util\0ObjLoader">
-      <UniqueIdentifier>{ef279950-b95f-4721-97f8-d401ebe7ff06}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Engine\4Manager">
       <UniqueIdentifier>{c8e56e7b-9786-487b-b38b-ef79877d0b38}</UniqueIdentifier>
     </Filter>
@@ -77,6 +74,15 @@
     </Filter>
     <Filter Include="Engine\4Manager\2CameraManager">
       <UniqueIdentifier>{6c43c68e-7214-4bb4-82cd-5e12570b1cc2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\6Texture">
+      <UniqueIdentifier>{45629fec-d6a5-4f76-bdc0-1bae660f579f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\4Manager\3TextureManager">
+      <UniqueIdentifier>{eafd8a20-4b07-4b53-96fd-aad2fc7f538a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\5Material\2TextureMapping">
+      <UniqueIdentifier>{defa342e-4b45-4add-abad-24c30cb5cdb6}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -182,6 +188,15 @@
     <ClCompile Include="Engine\CameraManager.cpp">
       <Filter>Engine\4Manager\2CameraManager</Filter>
     </ClCompile>
+    <ClCompile Include="Engine\Texture.cpp">
+      <Filter>Engine\6Texture</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine\TextureManager.cpp">
+      <Filter>Engine\4Manager\3TextureManager</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine\Materials\TextureMapping.cpp">
+      <Filter>Engine\5Material\2TextureMapping</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <CLInclude Include="resource.h">
@@ -231,6 +246,15 @@
     </ClInclude>
     <ClInclude Include="Engine\CameraManager.h">
       <Filter>Engine\4Manager\2CameraManager</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\Texture.h">
+      <Filter>Engine\6Texture</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\TextureManager.h">
+      <Filter>Engine\4Manager\3TextureManager</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\Materials\TextureMapping.h">
+      <Filter>Engine\5Material\2TextureMapping</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

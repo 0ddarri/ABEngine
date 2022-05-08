@@ -20,7 +20,7 @@ void TestScene::Init()
 	AddObj(testCam2);
 
 	testObject2 = new GameObject();
-	testObject2->AddComp(new MeshRenderer(L"Resources/Mesh/cube.x", L"ColorMaterial"));
+	testObject2->AddComp(new MeshRenderer(L"Resources/Mesh/ground.x", L"ColorMaterial"));
 	AddObj(testObject2);
 
 	testCam1->transform->position = new D3DXVECTOR3(0.0f, 0.0f, -100.0f);
@@ -34,7 +34,17 @@ void TestScene::Update(float deltaTime)
 	//	cout << "¾ßÈ£" << endl;
 
 	//testObject2->transform->position->x -= deltaTime * 10;
+	testObject2->transform->rotation->x -= deltaTime * 10;
 	//testObject->tranform->position->x += deltaTime;
+
+	if (DXUTWasKeyPressed(VK_F1))
+	{
+		CameraManager::Instance()->curCamNumber = 0;
+	}
+	if (DXUTWasKeyPressed(VK_F2))
+	{
+		CameraManager::Instance()->curCamNumber = 1;
+	}
 }
 
 void TestScene::Render()

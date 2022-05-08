@@ -2,6 +2,8 @@
 #include "resource.h"
 #include "Engine/SceneManager.h"
 #include "Engine/Materials/MaterialManager.h"
+#include "Engine/CameraManager.h"
+#include "Engine/TextureManager.h"
 
 // 시작할 때 한번 실행
 HRESULT CALLBACK OnD3D9CreateDevice( IDirect3DDevice9* pd3dDevice, const D3DSURFACE_DESC* pBackBufferSurfaceDesc, void* pUserContext )
@@ -9,6 +11,7 @@ HRESULT CALLBACK OnD3D9CreateDevice( IDirect3DDevice9* pd3dDevice, const D3DSURF
     cout << "Create Device" << endl;
     SceneManager::Instance()->Initialize();
     MaterialManager::Instance()->Initialize();
+    TextureManager::Instance()->Initialize();
     return S_OK;
 }
 
@@ -64,6 +67,8 @@ void CALLBACK OnD3D9DestroyDevice( void* pUserContext )
 {
     SceneManager::Instance()->GetCurrentScene()->Exit();
     MaterialManager::Instance()->Exit();
+    CameraManager::Instance()->Exit();
+    TextureManager::Instance()->Exit();
     cout << "Destroy Device" << endl;
 }
 
