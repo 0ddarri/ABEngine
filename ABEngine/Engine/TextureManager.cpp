@@ -5,7 +5,12 @@ void TextureManager::Initialize()
 {
 	D3DXCreateSprite(DEVICE, &sprite);
 
-	Texture* texture = new Texture(L"Resources/Texture/ground_Albedo.png", L"Ground_Albedo");
+	Texture* texture = new Texture(L"Resources/Texture/Texture_Ground_Diffuse.png", L"Ground_Albedo");
+
+	Texture* albedo = new Texture(L"Resources/Texture/Texture_Wall_1_Diffuse.png", L"Wall_Albedo");
+	Texture* specular = new Texture(L"Resources/Texture/Texture_Wall_1_Specular.png", L"Wall_Specular");
+	Texture* normal = new Texture(L"Resources/Texture/Texture_Wall_1_Normal.png", L"Wall_Normal");
+	cout << "TextureCount : " << texturelist.size() << endl;
 }
 
 Texture* TextureManager::GetTexture(wstring name)

@@ -10,8 +10,8 @@ HRESULT CALLBACK OnD3D9CreateDevice( IDirect3DDevice9* pd3dDevice, const D3DSURF
 {
     cout << "Create Device" << endl;
     SceneManager::Instance()->Initialize();
-    MaterialManager::Instance()->Initialize();
     TextureManager::Instance()->Initialize();
+    MaterialManager::Instance()->Initialize();
     return S_OK;
 }
 

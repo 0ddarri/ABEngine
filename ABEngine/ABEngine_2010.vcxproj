@@ -391,6 +391,7 @@
     <ClCompile Include="Engine\Materials\ColorMat.cpp" />
     <ClCompile Include="Engine\Materials\Material.cpp" />
     <ClCompile Include="Engine\Materials\MaterialManager.cpp" />
+    <ClCompile Include="Engine\Materials\SpecularMapping.cpp" />
     <ClCompile Include="Engine\Materials\TextureMapping.cpp" />
     <ClCompile Include="Engine\Mesh.cpp" />
     <ClCompile Include="Engine\MeshRenderer.cpp" />
@@ -436,6 +437,7 @@
     <ClInclude Include="Engine\Materials\ColorMat.h" />
     <ClInclude Include="Engine\Materials\Material.h" />
     <ClInclude Include="Engine\Materials\MaterialManager.h" />
+    <ClInclude Include="Engine\Materials\SpecularMapping.h" />
     <ClInclude Include="Engine\Materials\TextureMapping.h" />
     <ClInclude Include="Engine\Mesh.h" />
     <ClInclude Include="Engine\MeshRenderer.h" />

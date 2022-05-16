@@ -16,6 +16,11 @@ public:
 	LPDIRECT3DTEXTURE9 SetTexture(wstring path);
 	LPDIRECT3DTEXTURE9 SetTexture(LPDIRECT3DTEXTURE9 texture);
 
+	LPDIRECT3DTEXTURE9 GetTexture()
+	{
+		return texture;
+	}
+
 	void Exit();
 	wstring name = L"Texture";
 };

@@ -1,14 +1,17 @@
 #pragma once
 #include "Material.h"
 #include "../MeshRenderer.h"
+#include "../Texture.h"
 #include "../TextureManager.h"
+#include "../Transform.h"
 
 class TextureMapping : public Material
 {
 private:
+	Texture* texture;
 public:
 	TextureMapping();
-	TextureMapping(D3DXMATRIXA16 v, D3DXMATRIXA16 p, D3DXMATRIXA16 w);
+	TextureMapping(wstring texName);
 
 	D3DXMATRIXA16 view;
 	D3DXMATRIXA16 proj;

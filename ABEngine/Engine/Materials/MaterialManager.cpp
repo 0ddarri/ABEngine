@@ -3,8 +3,12 @@
 
 void MaterialManager::Initialize()
 {
+	Material* texturemapping = new TextureMapping();
+	AddMaterial(texturemapping);
 	Material* colorMat = new ColorMat();
 	AddMaterial(colorMat);
+	Material* specularmapping = new SpecularMapping();
+	AddMaterial(specularmapping);
 }
 
 void MaterialManager::AddMaterial(Material* m)

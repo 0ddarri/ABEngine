@@ -1,19 +1,5 @@
-﻿  ABEngine.cpp
+﻿  SpecularMapping.cpp
 D:\DirectX9_Projects\ABEngine\ABEngine\Engine\Transform.h(7,24): warning C4324: 'Transform': 맞춤 지정자 때문에 구조체가 채워졌습니다.
 D:\DirectX9_Projects\ABEngine\ABEngine\Engine\Camera.h(20,23): warning C4324: 'Camera': 맞춤 지정자 때문에 구조체가 채워졌습니다.
 D:\DirectX9_Projects\ABEngine\ABEngine\Engine\Materials\ColorMat.h(12,20): warning C4324: 'ColorMat': 맞춤 지정자 때문에 구조체가 채워졌습니다.
-  TextureMapping.cpp
-D:\DirectX9_Projects\ABEngine\ABEngine\Engine\Transform.h(7,24): warning C4324: 'Transform': 맞춤 지정자 때문에 구조체가 채워졌습니다.
-D:\DirectX9_Projects\ABEngine\ABEngine\Engine\Camera.h(20,23): warning C4324: 'Camera': 맞춤 지정자 때문에 구조체가 채워졌습니다.
-D:\DirectX9_Projects\ABEngine\ABEngine\Engine\Materials\ColorMat.h(12,20): warning C4324: 'ColorMat': 맞춤 지정자 때문에 구조체가 채워졌습니다.
-D:\DirectX9_Projects\ABEngine\ABEngine\Engine\Materials\TextureMapping.h(13,20): warning C4324: 'TextureMapping': 맞춤 지정자 때문에 구조체가 채워졌습니다.
-  Texture.cpp
-D:\DirectX9_Projects\ABEngine\ABEngine\Engine\Texture.cpp(29,16): warning C4245: '인수': 'int'에서 'UINT'(으)로의 변환입니다. signed 또는 unsigned가 일치하지 않습니다.
-D:\DirectX9_Projects\ABEngine\ABEngine\Engine\Texture.cpp(34,3): warning C5205: 비가상 소멸자가 포함된 추상 클래스 'IDirect3DTexture9'을(를) 삭제하면 정의되지 않은 동작이 발생합니다.
-C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\d3d9.h(1172): message : 'IDirect3DTexture9' 선언을 참조하십시오.
-D:\DirectX9_Projects\ABEngine\ABEngine\Engine\Texture.cpp(42,59): warning C4458: 'texture' 선언은 클래스 멤버를 숨깁니다.
-D:\DirectX9_Projects\ABEngine\ABEngine\Engine\Texture.h(7,21): message : 'Texture::texture' 선언을 참조하십시오.
-  TextureManager.cpp
-D:\DirectX9_Projects\ABEngine\ABEngine\Engine\TextureManager.cpp(8,11): warning C4189: 'texture': 지역 변수가 초기화되었으나 참조되지 않았습니다.
-  코드를 생성하고 있습니다...
   ABEngine_2010.vcxproj -> D:\DirectX9_Projects\ABEngine\ABEngine\x64\Debug\ABEngine.exe

@@ -84,6 +84,9 @@
     <Filter Include="Engine\5Material\2TextureMapping">
       <UniqueIdentifier>{defa342e-4b45-4add-abad-24c30cb5cdb6}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Engine\5Material\3SpecularMapping">
+      <UniqueIdentifier>{118a425f-d991-444f-9e19-988a26c41801}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <None Include="DXUT\Optional\directx.ico">
@@ -197,6 +200,9 @@
     <ClCompile Include="Engine\Materials\TextureMapping.cpp">
       <Filter>Engine\5Material\2TextureMapping</Filter>
     </ClCompile>
+    <ClCompile Include="Engine\Materials\SpecularMapping.cpp">
+      <Filter>Engine\5Material\3SpecularMapping</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <CLInclude Include="resource.h">
@@ -255,6 +261,9 @@
     </ClInclude>
     <ClInclude Include="Engine\Materials\TextureMapping.h">
       <Filter>Engine\5Material\2TextureMapping</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\Materials\SpecularMapping.h">
+      <Filter>Engine\5Material\3SpecularMapping</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

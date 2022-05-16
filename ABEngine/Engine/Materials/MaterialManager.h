@@ -2,6 +2,8 @@
 #include "../Singleton.h"
 #include "Material.h"
 #include "ColorMat.h"
+#include "TextureMapping.h"
+#include "SpecularMapping.h"
 
 class MaterialManager : public Singleton<MaterialManager>
 {
