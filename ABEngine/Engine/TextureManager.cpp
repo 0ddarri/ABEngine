@@ -10,6 +10,7 @@ void TextureManager::Initialize()
 	Texture* albedo = new Texture(L"Resources/Texture/Texture_Wall_1_Diffuse.png", L"Wall_Albedo");
 	Texture* specular = new Texture(L"Resources/Texture/Texture_Wall_1_Specular.png", L"Wall_Specular");
 	Texture* normal = new Texture(L"Resources/Texture/Texture_Wall_1_Normal.png", L"Wall_Normal");
+	Texture* uispecular = new Texture(L"Resources/Texture/specular.jpg", L"UI_Specular");
 	cout << "TextureCount : " << texturelist.size() << endl;
 }
 

@@ -388,6 +388,7 @@
     <ClCompile Include="Engine\CameraManager.cpp" />
     <ClCompile Include="Engine\Component.cpp" />
     <ClCompile Include="Engine\GameObject.cpp" />
+    <ClCompile Include="Engine\Image.cpp" />
     <ClCompile Include="Engine\Materials\ColorMat.cpp" />
     <ClCompile Include="Engine\Materials\Material.cpp" />
     <ClCompile Include="Engine\Materials\MaterialManager.cpp" />
@@ -434,6 +435,7 @@
     <ClInclude Include="Engine\CameraManager.h" />
     <ClInclude Include="Engine\Component.h" />
     <ClInclude Include="Engine\GameObject.h" />
+    <ClInclude Include="Engine\Image.h" />
     <ClInclude Include="Engine\Materials\ColorMat.h" />
     <ClInclude Include="Engine\Materials\Material.h" />
     <ClInclude Include="Engine\Materials\MaterialManager.h" />

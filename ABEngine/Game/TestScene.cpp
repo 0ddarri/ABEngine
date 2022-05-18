@@ -26,6 +26,11 @@ void TestScene::Init()
 
 	testCam1->transform->position = new D3DXVECTOR3(0.0f, 0.0f, -10.0f);
 	testCam2->transform->position = new D3DXVECTOR3(-20.0f, 10.0f, -10.0f);
+
+	testUI = new GameObject();
+	testUI->AddComp(new Image(L"UI_Specular"));
+	testUI->transform->position = new D3DXVECTOR3(1000, 0, 0);
+	AddObj(testUI);
 }
 
 void TestScene::Update(float deltaTime)

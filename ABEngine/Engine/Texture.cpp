@@ -5,12 +5,14 @@
 Texture::Texture()
 {
 	TextureManager::Instance()->AddTexture(this);
+	SetRect(&imgRect, 0, 0, info.Width, info.Height);
 }
 
 Texture::Texture(wstring path)
 {
 	TextureManager::Instance()->AddTexture(this);
 	SetTexture(path);
+	SetRect(&imgRect, 0, 0, info.Width, info.Height);
 }
 
 Texture::Texture(wstring path, wstring name)
@@ -18,6 +20,7 @@ Texture::Texture(wstring path, wstring name)
 	TextureManager::Instance()->AddTexture(this);
 	SetTexture(path);
 	this->name = name;
+	SetRect(&imgRect, 0, 0, info.Width, info.Height);
 }
 
 LPDIRECT3DTEXTURE9 Texture::SetTexture(wstring path)

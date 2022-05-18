@@ -4,6 +4,7 @@
 #include "../Engine/MeshRenderer.h"
 #include "../Engine/Camera.h"
 #include "../Engine/CameraManager.h"
+#include "../Engine/Image.h"
 
 class TestScene final : public Scene
 {
@@ -19,5 +20,6 @@ public:
 	GameObject* testCam1;
 	GameObject* testCam2;
 	GameObject* testObject2;
+	GameObject* testUI;
 };
 

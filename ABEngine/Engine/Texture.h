@@ -4,11 +4,12 @@
 class Texture
 {
 private:
-	LPDIRECT3DTEXTURE9 texture;
-	D3DXIMAGE_INFO info;
 
 protected:
 public:
+	D3DXIMAGE_INFO info;
+	LPDIRECT3DTEXTURE9 texture;
+	RECT imgRect;
 	Texture();
 	Texture(wstring path);
 	Texture(wstring path, wstring name);

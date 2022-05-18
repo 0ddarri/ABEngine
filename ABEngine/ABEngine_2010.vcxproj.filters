@@ -87,6 +87,9 @@
     <Filter Include="Engine\5Material\3SpecularMapping">
       <UniqueIdentifier>{118a425f-d991-444f-9e19-988a26c41801}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Engine\1Components\4Image">
+      <UniqueIdentifier>{9ae9f275-7ac8-4211-9c01-cfd6b7619082}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <None Include="DXUT\Optional\directx.ico">
@@ -203,6 +206,9 @@
     <ClCompile Include="Engine\Materials\SpecularMapping.cpp">
       <Filter>Engine\5Material\3SpecularMapping</Filter>
     </ClCompile>
+    <ClCompile Include="Engine\Image.cpp">
+      <Filter>Engine\1Components\4Image</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <CLInclude Include="resource.h">
@@ -264,6 +270,9 @@
     </ClInclude>
     <ClInclude Include="Engine\Materials\SpecularMapping.h">
       <Filter>Engine\5Material\3SpecularMapping</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\Image.h">
+      <Filter>Engine\1Components\4Image</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
