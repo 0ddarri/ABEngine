@@ -19,7 +19,7 @@ SpecularMapping::SpecularMapping(wstring albedo, wstring specular, wstring norma
 
 void SpecularMapping::Init()
 {
-	shader = LoadShader(L"Resources/Shader/NormalMapping.fx");
+	shader = LoadShader(L"Resources/Shader/defaultShader.fx");
 	name = L"defaultMaterial";
 }
 
@@ -37,17 +37,31 @@ void SpecularMapping::Render(MeshRenderer* m)
 	shader->SetMatrix((D3DXHANDLE)"gWorldMatrix", &matWorld);
 	shader->SetMatrix((D3DXHANDLE)"gWorldViewProjectionMatrix", &matWorldViewProj);
 
-	D3DXVECTOR4 lightPos(0, 0, 0, 1.0f);
-	shader->SetVector((D3DXHANDLE)"gWorldLightPosition", &lightPos);
+	D3DXVECTOR4 lightPos1 = D3DXVECTOR4(0, 10, 0, 1.0f);
+	D3DXVECTOR4 lightPos2 = D3DXVECTOR4(0, 10, 0, 1.0f);
+	D3DXVECTOR4 lightPos3 = D3DXVECTOR4(10, 0, 10, 1.0f);
+	D3DXVECTOR4 lightPos4 = D3DXVECTOR4(0, 0, 10, 1.0f);
+	shader->SetVector((D3DXHANDLE)"gLightPosition1", &lightPos1);
+	shader->SetVector((D3DXHANDLE)"gLightPosition2", &lightPos2);
+	shader->SetFloat((D3DXHANDLE)"lightRange", 10.0f);
+	shader->SetFloat((D3DXHANDLE)"lightEndRange", 20.0f);
+	//shader->SetVector((D3DXHANDLE)"gWorldLightPosition", &lightPos3);
+	//shader->SetVector((D3DXHANDLE)"gWorldLightPosition", &lightPos4);
 	D3DXVECTOR3 camPos3 = *CameraManager::Instance()->GetCurCamera()->parent->transform->position;
 	D3DXVECTOR4 camPos4(camPos3.x, camPos3.y, camPos3.z, 1.0f);
 	shader->SetVector((D3DXHANDLE)"gWorldCameraPosition", &camPos4);
 
 	D3DXVECTOR4 lightcolor(1, 1, 1, 1);
 	shader->SetVector((D3DXHANDLE)"gLightColor", &lightcolor);
-	shader->SetTexture((D3DXHANDLE)"DiffuseMap_Tex", albedo->GetTexture());
-	shader->SetTexture((D3DXHANDLE)"SpecularMap_Tex", specular->GetTexture());
-	shader->SetTexture((D3DXHANDLE)"NormalMap_Tex", normal->GetTexture());
+	shader->SetTexture((D3DXHANDLE)"DiffuseMap", albedo->GetTexture());
+	shader->SetTexture((D3DXHANDLE)"SpecularMap", specular->GetTexture());
+	shader->SetTexture((D3DXHANDLE)"NormalMap", normal->GetTexture());
+
+	float A, B, Alpha;
+	A = 0;
+	B = 100;
+	Alpha = 0.5;
+	cout << A * (1 - Alpha) + B * Alpha << endl;
 
 	UINT numPass = 0;
 	shader->Begin(&numPass, NULL);

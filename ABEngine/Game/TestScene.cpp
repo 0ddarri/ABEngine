@@ -20,9 +20,9 @@ void TestScene::Init()
 	AddObj(testCam2);
 
 	testObject2 = new GameObject();
-	testObject2->AddComp(new MeshRenderer(L"Resources/Mesh/wall.x", L"defaultMaterial"));
+	testObject2->AddComp(new MeshRenderer(L"Resources/Mesh/ground.x", L"defaultMaterial"));
 	AddObj(testObject2);
-	//testObject2->transform->scale = new D3DXVECTOR3(40, 40, 40);
+	testObject2->transform->scale = new D3DXVECTOR3(10, 1, 10);
 
 	testCam1->transform->position = new D3DXVECTOR3(0.0f, 0.0f, -10.0f);
 	testCam2->transform->position = new D3DXVECTOR3(-20.0f, 10.0f, -10.0f);
@@ -39,9 +39,10 @@ void TestScene::Update(float deltaTime)
 	//if (testObject->GetComp(new Transform)->name == L"Transform")
 	//	cout << "¾ßÈ£" << endl;
 
-	//testObject2->transform->position->x -= deltaTime * 10;
-	testObject2->transform->rotation->x -= deltaTime * 2;
+	//testObject2->transform->position->y += deltaTime;
+	//testObject2->transform->position->x -= deltaTime;
 	//testObject->tranform->position->x += deltaTime;
+
 
 	if (DXUTWasKeyPressed(VK_F1))
 	{

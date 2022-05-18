@@ -90,6 +90,15 @@
     <Filter Include="Engine\1Components\4Image">
       <UniqueIdentifier>{9ae9f275-7ac8-4211-9c01-cfd6b7619082}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Engine\1Components\5Light">
+      <UniqueIdentifier>{023386ed-4580-4ae0-a7f7-f51de8ea47e7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\1Components\5Light\0Light">
+      <UniqueIdentifier>{609a0492-de42-4dfb-9b14-7bd0c8fbb430}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\1Components\5Light\1PointLight">
+      <UniqueIdentifier>{93508e92-414e-4383-b101-359d1aebe0b4}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <None Include="DXUT\Optional\directx.ico">
@@ -209,6 +218,12 @@
     <ClCompile Include="Engine\Image.cpp">
       <Filter>Engine\1Components\4Image</Filter>
     </ClCompile>
+    <ClCompile Include="Engine\Light.cpp">
+      <Filter>Engine\1Components\5Light\0Light</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine\PointLight.cpp">
+      <Filter>Engine\1Components\5Light\1PointLight</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <CLInclude Include="resource.h">
@@ -273,6 +288,12 @@
     </ClInclude>
     <ClInclude Include="Engine\Image.h">
       <Filter>Engine\1Components\4Image</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\Light.h">
+      <Filter>Engine\1Components\5Light\0Light</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\PointLight.h">
+      <Filter>Engine\1Components\5Light\1PointLight</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
