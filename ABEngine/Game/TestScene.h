@@ -5,6 +5,7 @@
 #include "../Engine/Camera.h"
 #include "../Engine/CameraManager.h"
 #include "../Engine/Image.h"
+#include "../Engine/LightManager.h"
 
 class TestScene final : public Scene
 {

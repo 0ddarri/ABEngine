@@ -52,6 +52,24 @@ void TestScene::Update(float deltaTime)
 	{
 		CameraManager::Instance()->curCamNumber = 1;
 	}
+
+	if (DXUTIsKeyDown(VK_F5))
+	{
+		LightManager::Instance()->pointLightList[0]->range += deltaTime * 2;
+	}
+	if (DXUTIsKeyDown(VK_F6))
+	{
+		LightManager::Instance()->pointLightList[0]->range -= deltaTime * 2;
+	}
+
+	if (DXUTIsKeyDown(VK_F7))
+	{
+		LightManager::Instance()->pointLightList[0]->fallOffRange += deltaTime * 2;
+	}
+	if (DXUTIsKeyDown(VK_F8))
+	{
+		LightManager::Instance()->pointLightList[0]->fallOffRange -= deltaTime * 2;
+	}
 }
 
 void TestScene::Render()

@@ -99,6 +99,9 @@
     <Filter Include="Engine\1Components\5Light\1PointLight">
       <UniqueIdentifier>{93508e92-414e-4383-b101-359d1aebe0b4}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Engine\4Manager\4LightManager">
+      <UniqueIdentifier>{b1b358ac-7426-4d09-b71b-5dd9f7861d56}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <None Include="DXUT\Optional\directx.ico">
@@ -224,6 +227,9 @@
     <ClCompile Include="Engine\PointLight.cpp">
       <Filter>Engine\1Components\5Light\1PointLight</Filter>
     </ClCompile>
+    <ClCompile Include="Engine\LightManager.cpp">
+      <Filter>Engine\4Manager\4LightManager</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <CLInclude Include="resource.h">
@@ -294,6 +300,9 @@
     </ClInclude>
     <ClInclude Include="Engine\PointLight.h">
       <Filter>Engine\1Components\5Light\1PointLight</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\LightManager.h">
+      <Filter>Engine\4Manager\4LightManager</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

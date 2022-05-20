@@ -1,10 +1,7 @@
-#define LIGHTNUM 4
-
 float4x4 gWorldViewProjectionMatrix;
 float4x4 gWorldMatrix;
 
 float4 gWorldCameraPosition;
-float4 gWorldLightPosition;
 float4 gLightPosition1;
 
 float lightRange;
@@ -113,8 +110,6 @@ float4 ps_main(PS_INPUT Input) : COLOR
     float4 albedo = tex2D(DiffuseSampler, Input.mUV);
 
     diffuse1 = albedo.rgb * gLightColor * diffuse1;
-
-
 
     float3 specular = 0;
     if(diffuse1.x > 0)

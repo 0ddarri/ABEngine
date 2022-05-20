@@ -3,6 +3,7 @@
 #include "../MeshRenderer.h"
 #include "../Texture.h"
 #include "../TextureManager.h"
+#include "../LightManager.h"
 
 class SpecularMapping : public Material
 {

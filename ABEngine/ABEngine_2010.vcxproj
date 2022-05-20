@@ -390,6 +390,7 @@
     <ClCompile Include="Engine\GameObject.cpp" />
     <ClCompile Include="Engine\Image.cpp" />
     <ClCompile Include="Engine\Light.cpp" />
+    <ClCompile Include="Engine\LightManager.cpp" />
     <ClCompile Include="Engine\Materials\ColorMat.cpp" />
     <ClCompile Include="Engine\Materials\Material.cpp" />
     <ClCompile Include="Engine\Materials\MaterialManager.cpp" />
@@ -439,6 +440,7 @@
     <ClInclude Include="Engine\GameObject.h" />
     <ClInclude Include="Engine\Image.h" />
     <ClInclude Include="Engine\Light.h" />
+    <ClInclude Include="Engine\LightManager.h" />
     <ClInclude Include="Engine\Materials\ColorMat.h" />
     <ClInclude Include="Engine\Materials\Material.h" />
     <ClInclude Include="Engine\Materials\MaterialManager.h" />

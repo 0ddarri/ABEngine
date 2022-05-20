@@ -43,25 +43,19 @@ void SpecularMapping::Render(MeshRenderer* m)
 	D3DXVECTOR4 lightPos4 = D3DXVECTOR4(0, 0, 10, 1.0f);
 	shader->SetVector((D3DXHANDLE)"gLightPosition1", &lightPos1);
 	shader->SetVector((D3DXHANDLE)"gLightPosition2", &lightPos2);
-	shader->SetFloat((D3DXHANDLE)"lightRange", 10.0f);
-	shader->SetFloat((D3DXHANDLE)"lightEndRange", 20.0f);
+	shader->SetFloat((D3DXHANDLE)"lightRange", LightManager::Instance()->pointLightList[0]->range);
+	shader->SetFloat((D3DXHANDLE)"lightEndRange", LightManager::Instance()->pointLightList[0]->fallOffRange);
 	//shader->SetVector((D3DXHANDLE)"gWorldLightPosition", &lightPos3);
 	//shader->SetVector((D3DXHANDLE)"gWorldLightPosition", &lightPos4);
 	D3DXVECTOR3 camPos3 = *CameraManager::Instance()->GetCurCamera()->parent->transform->position;
 	D3DXVECTOR4 camPos4(camPos3.x, camPos3.y, camPos3.z, 1.0f);
 	shader->SetVector((D3DXHANDLE)"gWorldCameraPosition", &camPos4);
 
-	D3DXVECTOR4 lightcolor(1, 1, 1, 1);
-	shader->SetVector((D3DXHANDLE)"gLightColor", &lightcolor);
+	shader->SetVector((D3DXHANDLE)"gLightColor", &LightManager::Instance()->pointLightList[0]->color);
 	shader->SetTexture((D3DXHANDLE)"DiffuseMap", albedo->GetTexture());
 	shader->SetTexture((D3DXHANDLE)"SpecularMap", specular->GetTexture());
 	shader->SetTexture((D3DXHANDLE)"NormalMap", normal->GetTexture());
-
-	float A, B, Alpha;
-	A = 0;
-	B = 100;
-	Alpha = 0.5;
-	cout << A * (1 - Alpha) + B * Alpha << endl;
+	shader->SetFloat((D3DXHANDLE)"gSpecularPower", 1.0f);
 
 	UINT numPass = 0;
 	shader->Begin(&numPass, NULL);
