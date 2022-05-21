@@ -5,12 +5,21 @@ void TextureManager::Initialize()
 {
 	D3DXCreateSprite(DEVICE, &sprite);
 
-	Texture* texture = new Texture(L"Resources/Texture/Texture_Ground_Diffuse.png", L"Ground_Albedo");
+	Texture* ground_albedo = new Texture(L"Resources/Texture/Ground_Diffuse.png", L"Ground_Albedo");
+	Texture* ground_specular = new Texture(L"Resources/Texture/Ground_Specular.png", L"Ground_Specular");
+	Texture* ground_normal = new Texture(L"Resources/Texture/Ground_Normal.png", L"Ground_Normal");
 
-	Texture* albedo = new Texture(L"Resources/Texture/Texture_Wall_1_Diffuse.png", L"Wall_Albedo");
-	Texture* specular = new Texture(L"Resources/Texture/Texture_Wall_1_Specular.png", L"Wall_Specular");
-	Texture* normal = new Texture(L"Resources/Texture/Texture_Wall_1_Normal.png", L"Wall_Normal");
-	Texture* uispecular = new Texture(L"Resources/Texture/specular.jpg", L"UI_Specular");
+	Texture* lamp_albedo = new Texture(L"Resources/Texture/Lamp_Diffuse.png", L"Lamp_Diffuse");
+	Texture* lamp_specular = new Texture(L"Resources/Texture/Lamp_Specular.png", L"Lamp_Specular");
+	Texture* lamp_normal = new Texture(L"Resources/Texture/Lamp_Normal.png", L"Lamp_Normal");
+
+	Texture* wall_origin_albedo = new Texture(L"Resources/Texture/Wall_Original_Diffuse.png", L"Wall_Original_Diffuse");
+	Texture* wall_origin_specular = new Texture(L"Resources/Texture/Wall_Original_Specular.png", L"Wall_Original_Specular");
+	Texture* wall_origin_normal = new Texture(L"Resources/Texture/Wall_Original_Normal.png", L"Wall_Original_Normal");
+
+	Texture* wall_borken1_diffuse = new Texture(L"Resources/Texture/Wall_Broken1_Diffuse.png", L"Wall_Broken1_Diffuse");
+	Texture* wall_borken1_specular = new Texture(L"Resources/Texture/Wall_Broken1_Specular.png", L"Wall_Broken1_Specular");
+	Texture* wall_borken1_normal = new Texture(L"Resources/Texture/Wall_Broken1_Normal.png", L"Wall_Broken1_Normal");
 	cout << "TextureCount : " << texturelist.size() << endl;
 }
 

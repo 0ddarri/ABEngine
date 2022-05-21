@@ -5,10 +5,25 @@ void MaterialManager::Initialize()
 {
 	Material* texturemapping = new TextureMapping();
 	AddMaterial(texturemapping);
+
 	Material* colorMat = new ColorMat();
 	AddMaterial(colorMat);
-	Material* specularmapping = new SpecularMapping();
-	AddMaterial(specularmapping);
+
+	Material* groundMaterial = new SpecularMapping(L"Ground_Albedo", L"Ground_Specular", L"Ground_Normal");
+	groundMaterial->name = L"Ground Mat";
+	AddMaterial(groundMaterial);
+
+	Material* originwallmat = new SpecularMapping(L"Wall_Original_Diffuse", L"Wall_Original_Specular", L"Wall_Original_Normal");
+	originwallmat->name = L"Original Wall";
+	AddMaterial(originwallmat);
+
+	Material* brokenwall1mat = new SpecularMapping(L"Wall_Broken1_Diffuse", L"Wall_Broken1_Specular", L"Wall_Broken1_Normal");
+	brokenwall1mat->name = L"Broken Wall 1";
+	AddMaterial(brokenwall1mat);
+
+	Material* lampMat = new SpecularMapping(L"Lamp_Diffuse", L"Lamp_Specular", L"Lamp_Normal");
+	lampMat->name = L"Lamp";
+	AddMaterial(lampMat);
 }
 
 void MaterialManager::AddMaterial(Material* m)

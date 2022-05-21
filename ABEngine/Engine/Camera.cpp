@@ -5,8 +5,10 @@
 void Camera::SetViewMat()
 {
 	D3DXVECTOR3 eyepos = *parent->transform->position;
-	D3DXVECTOR3 look = { 0,0,0 };
-	D3DXVECTOR3 up = { 0,1,0 };
+	D3DXVECTOR3 look = Look;
+	D3DXVECTOR3 up = Up;
+	D3DXVec3Normalize(&View, &(look - *parent->transform->position));
+	D3DXVec3Cross(&Cross, &up, &View);
 
 	D3DXMatrixLookAtLH(&viewMat, &eyepos, &look, &up);
 	DEVICE->SetTransform(D3DTS_VIEW, &viewMat);
@@ -25,8 +27,9 @@ Camera::Camera()
 	CameraManager::Instance()->AddCamera(this);
 }
 
-void Camera::Init()
+void Camera::Init(GameObject* p)
 {
+	Component::Init(p);
 }
 
 void Camera::Update(float deltaTime)
@@ -40,4 +43,30 @@ void Camera::Render()
 }
 void Camera::Exit()
 {
+}
+
+void Camera::MoveLocalX(float speed)
+{
+	D3DXVECTOR3 moveX;
+	D3DXVec3Normalize(&moveX, &Cross);
+	moveX *= speed;
+	*parent->transform->position += moveX;
+	//Look += moveX;
+}
+
+void Camera::MoveLocalY(float speed)
+{
+	D3DXVECTOR3 moveY;
+	D3DXVec3Normalize(&moveY, &Up);
+	moveY *= speed;
+	*parent->transform->position += moveY;
+	//Look += moveY;
+}
+
+void Camera::MoveLocalZ(float speed)
+{
+	D3DXVECTOR3 moveZ = View;
+	moveZ *= speed;
+	*parent->transform->position += moveZ;
+	//Look += moveZ;
 }

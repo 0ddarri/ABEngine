@@ -9,5 +9,8 @@ public:
 	void Initialize();
 
 	vector<PointLight*> pointLightList;
+
+	PointLight* GetPointLight(wstring name);
+	void AddPointLight(PointLight* light);
 };
 

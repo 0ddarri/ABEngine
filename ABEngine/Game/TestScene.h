@@ -6,6 +6,7 @@
 #include "../Engine/CameraManager.h"
 #include "../Engine/Image.h"
 #include "../Engine/LightManager.h"
+#include "../Engine/PointLight.h"
 
 class TestScene final : public Scene
 {
@@ -20,7 +21,11 @@ public:
 
 	GameObject* testCam1;
 	GameObject* testCam2;
-	GameObject* testObject2;
-	GameObject* testUI;
+	GameObject* testLight;
+
+	GameObject* ground;
+	GameObject* wall_1;
+	GameObject* wall_2;
+	GameObject* lamp;
 };
 

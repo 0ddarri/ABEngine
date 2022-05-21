@@ -7,6 +7,7 @@ private:
 public:
 	PointLight();
 	PointLight(float range, float falloff);
+	PointLight(float range, float falloff, wstring n);
 
 	virtual void Init(GameObject* p);
 	virtual void Update(float deltaTime);

@@ -124,9 +124,9 @@ float4 ps_main(PS_INPUT Input) : COLOR
         specular *= specularIntensity.xyz * gLightColor;
     }
 
-    float3 ambient = float3(0.1f,0.1f,0.1f);
+    float3 ambient = float3(0.2f,0.2f,0.2f) * albedo;
 
-    float3 result = (ambient + diffuse1 + specular);
+    float3 result = (diffuse1 + specular);
     float d = 0.0f;
     float3 lightpos = gLightPosition1.xyz;
     d = distance(Input.worldPos.xyz, lightpos);
@@ -134,8 +134,7 @@ float4 ps_main(PS_INPUT Input) : COLOR
     {
         result *= smoothstep(lightEndRange, lightRange, d);
     }
-
-    return float4(result, 1);
+    return float4(result + ambient, 1);
 }
 
 technique normalMap

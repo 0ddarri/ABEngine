@@ -1,5 +1,5 @@
 ﻿  TestScene.cpp
 D:\DirectX9_Projects\ABEngine\ABEngine\Engine\Transform.h(7,24): warning C4324: 'Transform': 맞춤 지정자 때문에 구조체가 채워졌습니다.
-D:\DirectX9_Projects\ABEngine\ABEngine\Engine\Camera.h(20,23): warning C4324: 'Camera': 맞춤 지정자 때문에 구조체가 채워졌습니다.
+D:\DirectX9_Projects\ABEngine\ABEngine\Engine\Camera.h(29,23): warning C4324: 'Camera': 맞춤 지정자 때문에 구조체가 채워졌습니다.
 D:\DirectX9_Projects\ABEngine\ABEngine\Engine\Materials\ColorMat.h(12,20): warning C4324: 'ColorMat': 맞춤 지정자 때문에 구조체가 채워졌습니다.
   ABEngine_2010.vcxproj -> D:\DirectX9_Projects\ABEngine\ABEngine\x64\Debug\ABEngine.exe
