@@ -5,6 +5,7 @@
 #include "Engine/CameraManager.h"
 #include "Engine/TextureManager.h"
 #include "Engine/LightManager.h"
+#include "Engine/InputManager.h"
 
 // 시작할 때 한번 실행
 HRESULT CALLBACK OnD3D9CreateDevice( IDirect3DDevice9* pd3dDevice, const D3DSURFACE_DESC* pBackBufferSurfaceDesc, void* pUserContext )
@@ -28,6 +29,7 @@ HRESULT CALLBACK OnD3D9ResetDevice( IDirect3DDevice9* pd3dDevice, const D3DSURFA
 void CALLBACK OnFrameMove( double fTime, float fElapsedTime, void* pUserContext )
 {
     SceneManager::Instance()->GetCurrentScene()->Update(fElapsedTime);
+    InputManager::Instance()->InputUpdate();
     // Update
 }
 
@@ -74,6 +76,18 @@ void CALLBACK OnD3D9DestroyDevice( void* pUserContext )
     cout << "Destroy Device" << endl;
 }
 
+void CALLBACK OnMouse(bool bLeftButtonDown, bool bRightButtonDown, bool bMiddleButtonDown, bool bSideButton1Down, bool bSideButton2Down, int nMouseWheelDelta, int xPos, int yPos, void* pUserContext)
+{
+    if (bLeftButtonDown)
+    {
+        InputManager::Instance()->OnMouseDown = true;
+    }
+    else if (!bLeftButtonDown)
+    {
+        InputManager::Instance()->OnMouseUp = true;
+    }
+}
+
 //INT WINAPI wWinMain( HINSTANCE, HINSTANCE, LPWSTR, int )
 int main()
 {
@@ -90,6 +104,7 @@ int main()
     DXUTSetCallbackMsgProc( MsgProc );
     DXUTSetCallbackD3D9DeviceLost( OnD3D9LostDevice );
     DXUTSetCallbackD3D9DeviceDestroyed( OnD3D9DestroyDevice );
+    DXUTSetCallbackMouse( OnMouse );
 
     // TODO: Perform any application-level initialization here
 

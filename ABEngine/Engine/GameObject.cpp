@@ -68,3 +68,16 @@ Component* GameObject::GetComp(Component* comp)
 	delete comp;
 	return nullptr;
 }
+
+Component* GameObject::GetComp(wstring compname)
+{
+	for (Component* it : componentlist)
+	{
+		if (it->name == compname)
+		{
+			return it;
+		}
+	}
+	cout << "컴포넌트가 존재하지 않습니다" << endl;
+	return nullptr;
+}

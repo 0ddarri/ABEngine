@@ -7,6 +7,8 @@
 #include "../Engine/Image.h"
 #include "../Engine/LightManager.h"
 #include "../Engine/PointLight.h"
+#include "../Engine/InputManager.h"
+#include "../Engine/Button.h"
 
 class TestScene final : public Scene
 {
@@ -27,5 +29,7 @@ public:
 	GameObject* wall_1;
 	GameObject* wall_2;
 	GameObject* lamp;
+
+	GameObject* button;
 };
 

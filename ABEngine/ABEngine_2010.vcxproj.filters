@@ -102,6 +102,15 @@
     <Filter Include="Engine\4Manager\4LightManager">
       <UniqueIdentifier>{b1b358ac-7426-4d09-b71b-5dd9f7861d56}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Engine\4Manager\5InputManager">
+      <UniqueIdentifier>{e0d6c0a5-c40f-45c5-8b13-d193e2fd72b3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\7Cursor">
+      <UniqueIdentifier>{77e0c23d-1da2-4efd-b53b-82291d820b66}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\1Components\6Button">
+      <UniqueIdentifier>{b59f831c-d745-46df-a756-7a9854c64cd5}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <None Include="DXUT\Optional\directx.ico">
@@ -230,6 +239,15 @@
     <ClCompile Include="Engine\LightManager.cpp">
       <Filter>Engine\4Manager\4LightManager</Filter>
     </ClCompile>
+    <ClCompile Include="Engine\InputManager.cpp">
+      <Filter>Engine\4Manager\5InputManager</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine\Cursor.cpp">
+      <Filter>Engine\7Cursor</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine\Button.cpp">
+      <Filter>Engine\1Components\6Button</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <CLInclude Include="resource.h">
@@ -303,6 +321,15 @@
     </ClInclude>
     <ClInclude Include="Engine\LightManager.h">
       <Filter>Engine\4Manager\4LightManager</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\InputManager.h">
+      <Filter>Engine\4Manager\5InputManager</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\Cursor.h">
+      <Filter>Engine\7Cursor</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\Button.h">
+      <Filter>Engine\1Components\6Button</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

@@ -17,6 +17,17 @@ public:
 
 	void AddComp(Component* comp);
 	Component* GetComp(Component* comp);
+	Component* GetComp(wstring compname);
+
+	template <class T>
+	T& GetComponent()
+	{
+		for (Component* it : componentlist)
+		{
+			if (nullptr != dynamic_cast<T*> (it))
+				return *static_cast<T*>(it);
+		}
+	}
 
 	GameObject* parent = nullptr;
 

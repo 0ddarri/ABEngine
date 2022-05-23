@@ -32,6 +32,10 @@ void TestScene::Init()
 	AddObj(wall_2);
 	AddObj(lamp);
 
+	button = new GameObject();
+	button->AddComp(new Button(L"Ground_Albedo"));
+	AddObj(button);
+
 	testCam1->transform->position = new D3DXVECTOR3(0.0f, 0.0f, -10.0f);
 	testCam2->transform->position = new D3DXVECTOR3(7, 3, -7);
 
@@ -114,6 +118,11 @@ void TestScene::Update(float deltaTime)
 	if (DXUTIsKeyDown(VK_F10))
 	{
 		testLight->transform->position->y -= deltaTime;
+	}
+
+	if (button->GetComponent<Button>().OnClick())
+	{
+		cout << "안에있다" << endl;
 	}
 }
 

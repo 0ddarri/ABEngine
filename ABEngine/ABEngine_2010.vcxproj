@@ -384,9 +384,12 @@
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Engine\Button.cpp" />
     <ClCompile Include="Engine\Camera.cpp" />
     <ClCompile Include="Engine\CameraManager.cpp" />
     <ClCompile Include="Engine\Component.cpp" />
+    <ClCompile Include="Engine\Cursor.cpp" />
+    <ClCompile Include="Engine\InputManager.cpp" />
     <ClCompile Include="Engine\GameObject.cpp" />
     <ClCompile Include="Engine\Image.cpp" />
     <ClCompile Include="Engine\Light.cpp" />
@@ -434,9 +437,12 @@
   <ItemGroup>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Engine\Button.h" />
     <ClInclude Include="Engine\Camera.h" />
     <ClInclude Include="Engine\CameraManager.h" />
     <ClInclude Include="Engine\Component.h" />
+    <ClInclude Include="Engine\Cursor.h" />
+    <ClInclude Include="Engine\InputManager.h" />
     <ClInclude Include="Engine\GameObject.h" />
     <ClInclude Include="Engine\Image.h" />
     <ClInclude Include="Engine\Light.h" />
