@@ -8,6 +8,8 @@ private:
 	list<Component*> componentlist;
 protected:
 public:
+	bool Active;
+
 	GameObject();
 
 	virtual void Init();
@@ -32,5 +34,10 @@ public:
 	GameObject* parent = nullptr;
 
 	Transform* transform;
+
+	void SetActive(bool b)
+	{
+		Active = b;
+	}
 };
 

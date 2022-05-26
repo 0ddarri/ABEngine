@@ -5,6 +5,7 @@ GameObject::GameObject()
 {
 	transform = new Transform();
 	AddComp(transform);
+	Active = true;
 }
 
 void GameObject::Init()
@@ -17,6 +18,7 @@ void GameObject::Init()
 
 void GameObject::Update(float deltaTime)
 {
+	if (!Active) return;
 	for (Component* it : componentlist)
 	{
 		it->Update(deltaTime);
@@ -25,6 +27,7 @@ void GameObject::Update(float deltaTime)
 
 void GameObject::Render()
 {
+	if (!Active) return;
 	for (Component* it : componentlist)
 	{
 		it->Render();

@@ -401,6 +401,7 @@
     <ClCompile Include="Engine\Materials\TextureMapping.cpp" />
     <ClCompile Include="Engine\Mesh.cpp" />
     <ClCompile Include="Engine\MeshRenderer.cpp" />
+    <ClCompile Include="Engine\ObjectManager.cpp" />
     <ClCompile Include="Engine\PointLight.cpp" />
     <ClCompile Include="Engine\Scene.cpp" />
     <ClCompile Include="Engine\SceneManager.cpp" />
@@ -408,6 +409,7 @@
     <ClCompile Include="Engine\Texture.cpp" />
     <ClCompile Include="Engine\TextureManager.cpp" />
     <ClCompile Include="Engine\Transform.cpp" />
+    <ClCompile Include="Game\ObjectPool.cpp" />
     <ClCompile Include="Game\TestScene.cpp" />
     <None Include="DXUT\Optional\directx.ico" />
     <ClInclude Include="DXUT\Core\DXUT.h" />
@@ -454,6 +456,7 @@
     <ClInclude Include="Engine\Materials\TextureMapping.h" />
     <ClInclude Include="Engine\Mesh.h" />
     <ClInclude Include="Engine\MeshRenderer.h" />
+    <ClInclude Include="Engine\ObjectManager.h" />
     <ClInclude Include="Engine\PointLight.h" />
     <ClInclude Include="Engine\Scene.h" />
     <ClInclude Include="Engine\SceneManager.h" />
@@ -461,6 +464,7 @@
     <ClInclude Include="Engine\Texture.h" />
     <ClInclude Include="Engine\TextureManager.h" />
     <ClInclude Include="Engine\Transform.h" />
+    <ClInclude Include="Game\ObjectPool.h" />
     <ClInclude Include="Game\TestScene.h" />
     <CLInclude Include="resource.h" />
     <ResourceCompile Include="ABEngine.rc" />

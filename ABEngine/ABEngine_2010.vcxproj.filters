@@ -111,6 +111,12 @@
     <Filter Include="Engine\1Components\6Button">
       <UniqueIdentifier>{b59f831c-d745-46df-a756-7a9854c64cd5}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Game\1ObjectPool">
+      <UniqueIdentifier>{f5147259-d477-4d14-927c-39f5b359f729}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\4Manager\6ObjectManager">
+      <UniqueIdentifier>{311cbfd0-4e37-4960-b72f-e5cff06ed5e5}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <None Include="DXUT\Optional\directx.ico">
@@ -248,6 +254,12 @@
     <ClCompile Include="Engine\Button.cpp">
       <Filter>Engine\1Components\6Button</Filter>
     </ClCompile>
+    <ClCompile Include="Game\ObjectPool.cpp">
+      <Filter>Game\1ObjectPool</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine\ObjectManager.cpp">
+      <Filter>Engine\4Manager\6ObjectManager</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <CLInclude Include="resource.h">
@@ -330,6 +342,12 @@
     </ClInclude>
     <ClInclude Include="Engine\Button.h">
       <Filter>Engine\1Components\6Button</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\ObjectPool.h">
+      <Filter>Game\1ObjectPool</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\ObjectManager.h">
+      <Filter>Engine\4Manager\6ObjectManager</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

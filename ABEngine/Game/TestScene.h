@@ -9,6 +9,7 @@
 #include "../Engine/PointLight.h"
 #include "../Engine/InputManager.h"
 #include "../Engine/Button.h"
+#include "../Engine/ObjectManager.h"
 
 class TestScene final : public Scene
 {
@@ -21,15 +22,12 @@ public:
 	void Render() override;
 	void Exit() override;
 
-	GameObject* testCam1;
-	GameObject* testCam2;
+	GameObject* Cam;
 	GameObject* testLight;
 
 	GameObject* ground;
-	GameObject* wall_1;
-	GameObject* wall_2;
 	GameObject* lamp;
 
-	GameObject* button;
+	GameObject* ObjSpawnUI_BG;
 };
 

@@ -366,6 +366,12 @@ using namespace std;
 const int SCW = 1280;
 const int SCH = 720;
 
+enum OBJECT_TYPE
+{
+    WALL_ORIGINAL,
+    WALL_HOLE,
+    LAMP
+};
 
 #endif
 
