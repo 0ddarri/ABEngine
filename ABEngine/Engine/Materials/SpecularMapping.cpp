@@ -37,14 +37,14 @@ void SpecularMapping::Render(MeshRenderer* m)
 	shader->SetMatrix((D3DXHANDLE)"gWorldMatrix", &matWorld);
 	shader->SetMatrix((D3DXHANDLE)"gWorldViewProjectionMatrix", &matWorldViewProj);
 
-	D3DXVECTOR3 lightPos = *LightManager::Instance()->pointLightList[0]->parent->transform->position;
+	D3DXVECTOR3 lightPos = LightManager::Instance()->pointLightList[0]->parent->transform->position;
 	D3DXVECTOR4 lightPos1 = D3DXVECTOR4(lightPos.x, lightPos.y, lightPos.z, 1.0f);
 	shader->SetVector((D3DXHANDLE)"gLightPosition1", &lightPos1);
 	shader->SetFloat((D3DXHANDLE)"lightRange", LightManager::Instance()->pointLightList[0]->range);
 	shader->SetFloat((D3DXHANDLE)"lightEndRange", LightManager::Instance()->pointLightList[0]->fallOffRange);
 	//shader->SetVector((D3DXHANDLE)"gWorldLightPosition", &lightPos3);
 	//shader->SetVector((D3DXHANDLE)"gWorldLightPosition", &lightPos4);
-	D3DXVECTOR3 camPos3 = *CameraManager::Instance()->GetCurCamera()->parent->transform->position;
+	D3DXVECTOR3 camPos3 = CameraManager::Instance()->GetCurCamera()->parent->transform->position;
 	D3DXVECTOR4 camPos4(camPos3.x, camPos3.y, camPos3.z, 1.0f);
 	shader->SetVector((D3DXHANDLE)"gWorldCameraPosition", &camPos4);
 

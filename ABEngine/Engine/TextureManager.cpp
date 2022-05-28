@@ -22,6 +22,7 @@ void TextureManager::Initialize()
 	Texture* wall_borken1_normal = new Texture(L"Resources/Texture/Wall_Broken1_Normal.png", L"Wall_Broken1_Normal");
 
 	Texture* uibg = new Texture(L"Resources/Texture/UIBG.png", L"UI_Background");
+	Texture* btn = new Texture(L"Resources/Texture/Button.png", L"Button");
 	cout << "TextureCount : " << texturelist.size() << endl;
 }
 

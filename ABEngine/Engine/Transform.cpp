@@ -5,16 +5,16 @@ Transform::Transform()
 {
 	name = L"Transform";
 
-	position = new D3DXVECTOR3(0, 0, 0);
-	rotation = new D3DXVECTOR3(0, 0, 0);
-	scale = new D3DXVECTOR3(1, 1, 1);
+	position = D3DXVECTOR3(0, 0, 0);
+	rotation = D3DXVECTOR3(0, 0, 0);
+	scale = D3DXVECTOR3(1, 1, 1);
 }
 
 Transform::Transform(const D3DXVECTOR3 pos, const D3DXVECTOR3 rot, const D3DXVECTOR3 s)
 {
-	*position = pos;
-	*rotation = rot;
-	*scale = s;
+	position = pos;
+	rotation = rot;
+	scale = s;
 }
 
 void Transform::Init(GameObject* p)
@@ -29,13 +29,13 @@ void Transform::Update(float deltaTime)
 void Transform::SetMatrix()
 {
 	D3DXMATRIXA16 trans;
-	D3DXMatrixTranslation(&trans, position->x, position->y, position->z);
+	D3DXMatrixTranslation(&trans, position.x, position.y, position.z);
 
 	D3DXMATRIXA16 rot;
-	D3DXMatrixRotationYawPitchRoll(&rot, rotation->x, rotation->y, rotation->z);
+	D3DXMatrixRotationYawPitchRoll(&rot, rotation.x, rotation.y, rotation.z);
 
 	D3DXMATRIXA16 scalemat;
-	D3DXMatrixScaling(&scalemat, scale->x, scale->y, scale->z);
+	D3DXMatrixScaling(&scalemat, scale.x, scale.y, scale.z);
 
 	worldMat = trans * rot * scalemat;
 

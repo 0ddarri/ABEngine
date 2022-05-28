@@ -10,6 +10,7 @@
 #include "../Engine/InputManager.h"
 #include "../Engine/Button.h"
 #include "../Engine/ObjectManager.h"
+#include "ObjectBtnUI.h"
 
 class TestScene final : public Scene
 {
@@ -29,5 +30,16 @@ public:
 	GameObject* lamp;
 
 	GameObject* ObjSpawnUI_BG;
+
+	vector<ObjectBtnUI*> ObjButtonList;
+	OBJECT_TYPE SelectedType;
+
+	void CameraMove(float deltaTime);
+
+	GameObject* testInst;
+
+	OBJECT_TYPE curtype;
+
+	GameObject* SelectedObj;
 };
 

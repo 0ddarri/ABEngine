@@ -24,7 +24,14 @@ GameObject* ObjectManager::Instantiate(OBJECT_TYPE type, D3DXVECTOR3 pos)
 	default:
 		break;
 	}
+	obj->transform->position = pos;
 	SceneManager::Instance()->GetCurrentScene()->AddObj(obj);
 
 	return obj;
+}
+
+void ObjectManager::Destroy(GameObject* obj)
+{
+	obj->Exit();
+	SceneManager::Instance()->GetCurrentScene()->_Objectlist.remove(SceneManager::Instance()->GetCurrentScene()->FindObj(obj));
 }

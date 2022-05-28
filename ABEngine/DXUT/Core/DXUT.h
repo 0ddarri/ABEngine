@@ -349,6 +349,8 @@ void      WINAPI DXUTDestroyState(); // Optional method to destroy DXUT's memory
 #include <iostream>
 #include <list>
 #include <vector>
+#include <algorithm>
+#include <functional>
 #include <map>
 #include <string>
 #include <ctime>

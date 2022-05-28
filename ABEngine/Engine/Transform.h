@@ -17,9 +17,9 @@ public:
 	virtual void Render();
 	virtual void Exit();
 
-	D3DXVECTOR3* position;
-	D3DXVECTOR3* rotation;
-	D3DXVECTOR3* scale;
+	D3DXVECTOR3 position;
+	D3DXVECTOR3 rotation;
+	D3DXVECTOR3 scale;
 
 	D3DXMATRIXA16 GetWorldMatrix();
 };

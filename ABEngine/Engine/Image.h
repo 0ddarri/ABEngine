@@ -1,17 +1,18 @@
 #pragma once
-#include "Component.h"
+#include "UI.h"
 #include "CameraManager.h"
 #include "TextureManager.h"
 #include "Transform.h"
 #include "GameObject.h"
 
-class Image : public Component
+class Image : public UI
 {
 private:
 protected:
 public:
 	Image();
-	Image(wstring path);
+	Image(wstring texName);
+	Image(wstring texName, int l);
 
 	Texture* image;
 

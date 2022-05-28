@@ -5,12 +5,21 @@ Image::Image()
 {
 	name = L"Image";
 	image = TextureManager::Instance()->GetTexture(L"Ground_Albedo");
+	layer = 0;
 }
 
 Image::Image(wstring texName)
 {
 	name = L"Image";
 	image = TextureManager::Instance()->GetTexture(texName);
+	layer = 0;
+}
+
+Image::Image(wstring texName, int l)
+{
+	name = L"Image";
+	image = TextureManager::Instance()->GetTexture(texName);
+	layer = l;
 }
 
 void Image::Init(GameObject* p)

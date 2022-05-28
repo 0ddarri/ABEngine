@@ -7,11 +7,21 @@ void Scene::Init() // ¾À ÁøÀÔ
 	{
 		it->Init();
 	}
+
+	for (GameObject* it : _UIlist)
+	{
+		it->Init();
+	}
 }
 
 void Scene::Update(float deltaTime) // ÇÁ·¹ÀÓ¸¶´Ù
 {
 	for (GameObject* it : _Objectlist)
+	{
+		it->Update(deltaTime);
+	}
+
+	for (GameObject* it : _UIlist)
 	{
 		it->Update(deltaTime);
 	}
@@ -23,6 +33,11 @@ void Scene::Render() // ·»´õ¸µ
 	{
 		it->Render();
 	}
+
+	for (GameObject* it : _UIlist)
+	{
+		it->Render();
+	}
 }
 
 void Scene::Exit() // ¾À Å»Ãâ
@@ -31,9 +46,40 @@ void Scene::Exit() // ¾À Å»Ãâ
 	{
 		it->Exit();
 	}
+
+	for (GameObject* it : _UIlist)
+	{
+		it->Exit();
+	}
 }
 
 void Scene::AddObj(GameObject* obj)
 {
 	_Objectlist.push_back(obj);
+}
+
+void Scene::AddUI(GameObject* ui)
+{
+	_UIlist.push_back(ui);
+	_UIlist.sort(Comp);
+}
+
+GameObject* Scene::FindObj(GameObject* obj)
+{
+	auto f = find(_Objectlist.begin(), _Objectlist.end(), obj);
+	if (f != _Objectlist.end())
+	{
+		cout << "Find Object In Scene" << endl;
+		return *f;
+	}
+
+	auto d = find(_UIlist.begin(), _UIlist.end(), obj);
+	if (d != _UIlist.end())
+	{
+		cout << "Find UIObject In Scene" << endl;
+		return *d;
+	}
+
+	cout << "ERROR! : ¿ÀºêÁ§Æ®¸¦ ¾À¿¡¼­ Ã£Áö ¸øÇß½À´Ï´Ù" << endl;
+	return nullptr;
 }

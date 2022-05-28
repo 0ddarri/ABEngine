@@ -4,12 +4,21 @@
 Button::Button()
 {
 	name = L"Button";
+	layer = 0;
 }
 
 Button::Button(wstring textureName)
 {
 	name = L"Button";
 	image = TextureManager::Instance()->GetTexture(textureName);
+	layer = 0;
+}
+
+Button::Button(wstring textureName, int l)
+{
+	name = L"Button";
+	image = TextureManager::Instance()->GetTexture(textureName);
+	layer = l;
 }
 
 void Button::Init(GameObject* p)
@@ -39,10 +48,10 @@ bool Button::CheckIn()
 {
 	if (image == nullptr) return false;
 
-	float left =  parent->transform->position->x - image->info.Width / 2;
-	float right =  parent->transform->position->x + image->info.Width / 2;
-	float top =  parent->transform->position->y + image->info.Height / 2;
-	float bottom =  parent->transform->position->y - image->info.Height / 2;
+	float left =  parent->transform->position.x - image->info.Width / 2;
+	float right =  parent->transform->position.x + image->info.Width / 2;
+	float top =  parent->transform->position.y + image->info.Height / 2;
+	float bottom =  parent->transform->position.y - image->info.Height / 2;
 
 	D3DXVECTOR2 mousePos = InputManager::Instance()->cursor->GetMousePosition();
 	if (mousePos.x > left && mousePos.x < right && mousePos.y > bottom && mousePos.y < top)
@@ -59,7 +68,9 @@ bool Button::OnClick()
 	if (InputManager::Instance()->OnMouseDown)
 	{
 		if (CheckIn())
+		{
 			return true;
+		}
 	}
 	return false;
 }

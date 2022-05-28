@@ -409,6 +409,8 @@
     <ClCompile Include="Engine\Texture.cpp" />
     <ClCompile Include="Engine\TextureManager.cpp" />
     <ClCompile Include="Engine\Transform.cpp" />
+    <ClCompile Include="Engine\UI.cpp" />
+    <ClCompile Include="Game\ObjectBtnUI.cpp" />
     <ClCompile Include="Game\ObjectPool.cpp" />
     <ClCompile Include="Game\TestScene.cpp" />
     <None Include="DXUT\Optional\directx.ico" />
@@ -464,6 +466,8 @@
     <ClInclude Include="Engine\Texture.h" />
     <ClInclude Include="Engine\TextureManager.h" />
     <ClInclude Include="Engine\Transform.h" />
+    <ClInclude Include="Engine\UI.h" />
+    <ClInclude Include="Game\ObjectBtnUI.h" />
     <ClInclude Include="Game\ObjectPool.h" />
     <ClInclude Include="Game\TestScene.h" />
     <CLInclude Include="resource.h" />

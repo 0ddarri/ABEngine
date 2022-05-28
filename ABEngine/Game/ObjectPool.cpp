@@ -42,8 +42,8 @@ GameObject* ObjectPool::SpawnObject(wstring poolName, D3DXVECTOR3 pos, D3DXVECTO
 				if (!obj->Active)
 				{
 					obj->SetActive(true);
-					obj->transform->position = &pos;
-					obj->transform->rotation = &rot;
+					obj->transform->position = pos;
+					obj->transform->rotation = rot;
 					cout << "Spawn Object" << endl;
 					return obj;
 				}
