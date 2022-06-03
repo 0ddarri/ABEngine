@@ -1,7 +1,0 @@
-﻿  TestScene.cpp
-D:\DirectX9_Projects\ABEngine\ABEngine\Engine\Transform.h(7,24): warning C4324: 'Transform': 맞춤 지정자 때문에 구조체가 채워졌습니다.
-D:\DirectX9_Projects\ABEngine\ABEngine\Engine\Camera.h(29,23): warning C4324: 'Camera': 맞춤 지정자 때문에 구조체가 채워졌습니다.
-D:\DirectX9_Projects\ABEngine\ABEngine\Engine\Materials\ColorMat.h(12,20): warning C4324: 'ColorMat': 맞춤 지정자 때문에 구조체가 채워졌습니다.
-D:\DirectX9_Projects\ABEngine\ABEngine\Game\TestScene.cpp(48,36): warning C4244: '=': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-D:\DirectX9_Projects\ABEngine\ABEngine\Engine\GameObject.h(33): warning C4715: 'GameObject::GetComponent<Button>': 모든 제어 경로에서 값을 반환하지는 않습니다.
-  ABEngine_2010.vcxproj -> D:\DirectX9_Projects\ABEngine\ABEngine\x64\Debug\ABEngine.exe

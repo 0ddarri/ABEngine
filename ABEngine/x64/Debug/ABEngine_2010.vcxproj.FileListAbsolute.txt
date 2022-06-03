@@ -1,2 +1,0 @@
-D:\DirectX9_Projects\ABEngine\x64\Debug\ABEngine.exe
-D:\DirectX9_Projects\ABEngine\ABEngine\x64\Debug\ABEngine.exe

@@ -80,6 +80,6 @@ GameObject* Scene::FindObj(GameObject* obj)
 		return *d;
 	}
 
-	cout << "ERROR! : 오브젝트를 씬에서 찾지 못했습니다" << endl;
+	wcout << "ERROR! : 오브젝트를 씬에서 찾지 못했습니다 : " << obj->name.c_str() << endl;
 	return nullptr;
 }

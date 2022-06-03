@@ -31,13 +31,20 @@ void Transform::SetMatrix()
 	D3DXMATRIXA16 trans;
 	D3DXMatrixTranslation(&trans, position.x, position.y, position.z);
 
-	D3DXMATRIXA16 rot;
-	D3DXMatrixRotationYawPitchRoll(&rot, rotation.x, rotation.y, rotation.z);
+	D3DXVECTOR3 rot(rotation);
+	D3DXMATRIXA16 rotX;
+	D3DXMatrixRotationX(&rotX, D3DXToRadian(rot.x));
+	D3DXMATRIXA16 rotY;
+	D3DXMatrixRotationY(&rotY, D3DXToRadian(rot.y));
+	D3DXMATRIXA16 rotZ;
+	D3DXMatrixRotationZ(&rotZ, D3DXToRadian(rot.z));
+
+	D3DXMATRIXA16 angle = rotX * rotY * rotZ;
 
 	D3DXMATRIXA16 scalemat;
 	D3DXMatrixScaling(&scalemat, scale.x, scale.y, scale.z);
 
-	worldMat = trans * rot * scalemat;
+	worldMat = angle * scalemat * trans;
 
 	DEVICE->SetTransform(D3DTS_WORLD, &worldMat);
 }

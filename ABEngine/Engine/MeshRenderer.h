@@ -4,6 +4,7 @@
 #include "Transform.h"
 #include "Materials/MaterialManager.h"
 #include "GameObject.h"
+#include "SceneManager.h"
 
 class MeshRenderer : public Component
 {
@@ -21,5 +22,7 @@ public:
 	Mesh* mesh;
 
 	Material* material;
+
+	D3DXVECTOR4 color;
 };
 

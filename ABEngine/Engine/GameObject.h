@@ -12,6 +12,7 @@ public:
 	bool Active;
 
 	GameObject();
+	GameObject(GameObject* obj);
 
 	virtual void Init();
 	virtual void Update(float deltaTime);
@@ -19,8 +20,7 @@ public:
 	virtual void Exit();
 
 	void AddComp(Component* comp);
-	Component* GetComp(Component* comp);
-	Component* GetComp(wstring compname);
+	bool IsComp(wstring compname);
 
 	template <class T>
 	T& GetComponent()
@@ -40,5 +40,7 @@ public:
 	{
 		Active = b;
 	}
+
+	wstring name;
 };
 

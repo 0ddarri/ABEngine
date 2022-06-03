@@ -49,6 +49,7 @@ void SpecularMapping::Render(MeshRenderer* m)
 	shader->SetVector((D3DXHANDLE)"gWorldCameraPosition", &camPos4);
 
 	shader->SetVector((D3DXHANDLE)"gLightColor", &LightManager::Instance()->pointLightList[0]->color);
+	shader->SetVector((D3DXHANDLE)"gObjectColor", &m->color);
 	shader->SetTexture((D3DXHANDLE)"DiffuseMap", albedo->GetTexture());
 	shader->SetTexture((D3DXHANDLE)"SpecularMap", specular->GetTexture());
 	shader->SetTexture((D3DXHANDLE)"NormalMap", normal->GetTexture());

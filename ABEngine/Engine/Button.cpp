@@ -48,10 +48,10 @@ bool Button::CheckIn()
 {
 	if (image == nullptr) return false;
 
-	float left =  parent->transform->position.x - image->info.Width / 2;
-	float right =  parent->transform->position.x + image->info.Width / 2;
-	float top =  parent->transform->position.y + image->info.Height / 2;
-	float bottom =  parent->transform->position.y - image->info.Height / 2;
+	float left =  (parent->transform->position.x - (image->info.Width / 2 * parent->transform->scale.x));
+	float right =  (parent->transform->position.x + (image->info.Width / 2 * parent->transform->scale.x));
+	float top =  (parent->transform->position.y + (image->info.Height / 2 * parent->transform->scale.y));
+	float bottom =  (parent->transform->position.y - (image->info.Height / 2  * parent->transform->scale.y));
 
 	D3DXVECTOR2 mousePos = InputManager::Instance()->cursor->GetMousePosition();
 	if (mousePos.x > left && mousePos.x < right && mousePos.y > bottom && mousePos.y < top)

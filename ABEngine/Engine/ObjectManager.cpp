@@ -32,6 +32,13 @@ GameObject* ObjectManager::Instantiate(OBJECT_TYPE type, D3DXVECTOR3 pos)
 
 void ObjectManager::Destroy(GameObject* obj)
 {
+	if (obj == NULL)
+	{
+		cout << "¹¹Áö ÀÌ ÂòÂòÇÔÀº? " << endl;
+		return;
+	}
 	obj->Exit();
 	SceneManager::Instance()->GetCurrentScene()->_Objectlist.remove(SceneManager::Instance()->GetCurrentScene()->FindObj(obj));
+	SceneManager::Instance()->GetCurrentScene()->_UIlist.remove(SceneManager::Instance()->GetCurrentScene()->FindObj(obj));
+	obj = NULL;
 }

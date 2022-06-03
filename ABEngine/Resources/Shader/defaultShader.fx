@@ -93,6 +93,7 @@ sampler2D NormalSampler
 };
 
 float4 gLightColor;
+float4 gObjectColor;
 float gSpecularPower;
 
 float4 ps_main(PS_INPUT Input) : COLOR
@@ -134,7 +135,7 @@ float4 ps_main(PS_INPUT Input) : COLOR
     {
         result *= smoothstep(lightEndRange, lightRange, d);
     }
-    return float4(result + ambient, 1);
+    return float4(result + ambient, 1) * gObjectColor;
 }
 
 technique normalMap

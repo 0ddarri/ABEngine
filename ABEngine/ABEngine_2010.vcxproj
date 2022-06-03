@@ -406,10 +406,12 @@
     <ClCompile Include="Engine\Scene.cpp" />
     <ClCompile Include="Engine\SceneManager.cpp" />
     <ClCompile Include="Engine\Singleton.cpp" />
+    <ClCompile Include="Engine\Text.cpp" />
     <ClCompile Include="Engine\Texture.cpp" />
     <ClCompile Include="Engine\TextureManager.cpp" />
     <ClCompile Include="Engine\Transform.cpp" />
     <ClCompile Include="Engine\UI.cpp" />
+    <ClCompile Include="Game\IngameObject.cpp" />
     <ClCompile Include="Game\ObjectBtnUI.cpp" />
     <ClCompile Include="Game\ObjectPool.cpp" />
     <ClCompile Include="Game\TestScene.cpp" />
@@ -463,10 +465,12 @@
     <ClInclude Include="Engine\Scene.h" />
     <ClInclude Include="Engine\SceneManager.h" />
     <ClInclude Include="Engine\Singleton.h" />
+    <ClInclude Include="Engine\Text.h" />
     <ClInclude Include="Engine\Texture.h" />
     <ClInclude Include="Engine\TextureManager.h" />
     <ClInclude Include="Engine\Transform.h" />
     <ClInclude Include="Engine\UI.h" />
+    <ClInclude Include="Game\IngameObject.h" />
     <ClInclude Include="Game\ObjectBtnUI.h" />
     <ClInclude Include="Game\ObjectPool.h" />
     <ClInclude Include="Game\TestScene.h" />

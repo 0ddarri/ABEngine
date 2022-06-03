@@ -22,5 +22,7 @@ public:
 	D3DXVECTOR3 scale;
 
 	D3DXMATRIXA16 GetWorldMatrix();
+
+	void SetView();
 };
 

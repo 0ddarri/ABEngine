@@ -32,6 +32,7 @@ void ColorMat::Render(MeshRenderer* m)
 	shader->SetMatrix((D3DXHANDLE)"gWorldMatrix", &world);
 	shader->SetMatrix((D3DXHANDLE)"gViewMatrix", &view);
 	shader->SetMatrix((D3DXHANDLE)"gProjectionMatrix", &proj);
+	shader->SetVector((D3DXHANDLE)"gColor", &m->color);
 
 	UINT numPass = 0;
 	shader->Begin(&numPass, NULL);

@@ -3,6 +3,7 @@
 
 MeshRenderer::MeshRenderer()
 {
+	color = { 1,1,1,1 };
 	name = L"MeshRenderer";
 	mesh = new Mesh();
 	material = MaterialManager::Instance()->GetMaterial(L"ColorMaterial");
@@ -10,6 +11,7 @@ MeshRenderer::MeshRenderer()
 
 MeshRenderer::MeshRenderer(wstring path, wstring matName)
 {
+	color = { 1,1,1,1 };
 	name = L"MeshRenderer";
 	mesh = new Mesh(path);
 	material = MaterialManager::Instance()->GetMaterial(matName);

@@ -1,7 +1,7 @@
 #pragma once
 #include "Singleton.h"
 #include "GameObject.h"
-#include "SceneManager.h"
+#include "UI.h"
 #include "SceneManager.h"
 
 

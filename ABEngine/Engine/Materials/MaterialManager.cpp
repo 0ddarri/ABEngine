@@ -7,6 +7,7 @@ void MaterialManager::Initialize()
 	AddMaterial(texturemapping);
 
 	Material* colorMat = new ColorMat();
+	colorMat->name = L"ColorMaterial";
 	AddMaterial(colorMat);
 
 	Material* groundMaterial = new SpecularMapping(L"Ground_Albedo", L"Ground_Specular", L"Ground_Normal");

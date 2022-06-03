@@ -6,6 +6,15 @@ GameObject::GameObject()
 	transform = new Transform();
 	AddComp(transform);
 	Active = true;
+	name = L"GameObject";
+}
+
+GameObject::GameObject(GameObject* obj)
+{
+	componentlist = obj->componentlist;
+	transform = obj->transform;
+	name = obj->name;
+	Active = obj->Active;
 }
 
 void GameObject::Init()
@@ -57,30 +66,14 @@ void GameObject::AddComp(Component* comp)
 	componentlist.push_back(comp);
 }
 
-Component* GameObject::GetComp(Component* comp)
-{
-	for (Component* it : componentlist)
-	{
-		if (it->name == comp->name)
-		{
-			delete comp;
-			return it;
-		}
-	}
-	cout << "컴포넌트가 존재하지 않습니다" << endl;
-	delete comp;
-	return nullptr;
-}
-
-Component* GameObject::GetComp(wstring compname)
+bool GameObject::IsComp(wstring compname)
 {
 	for (Component* it : componentlist)
 	{
 		if (it->name == compname)
 		{
-			return it;
+			return true;
 		}
 	}
-	cout << "컴포넌트가 존재하지 않습니다" << endl;
-	return nullptr;
+	return false;
 }
