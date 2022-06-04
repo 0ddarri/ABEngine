@@ -12,6 +12,7 @@ public:
 
 	OBJECT_TYPE type;
 	wstring objName;
+	wstring materialName;
 
 	virtual void Init();
 	virtual void Update(float deltaTime);

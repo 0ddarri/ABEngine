@@ -16,6 +16,8 @@ void TestScene::Init()
 	Scene::Init();
 	cout << "Init" << endl;
 
+	isCreating = false;
+
 	Cam = new GameObject();
 	Cam->AddComp(new Camera);
 	Cam->transform->position = D3DXVECTOR3(7, 3, -7);
@@ -56,12 +58,15 @@ void TestScene::Init()
 		{
 		case 0:
 			btn->SetName(L"Original Wall");
+			btn->materialName = L"Original Wall";
 			break;
 		case 1:
 			btn->SetName(L"Broken Wall");
+			btn->materialName = L"Broken Wall 1";
 			break;
 		case 2:
 			btn->SetName(L"Lamp");
+			btn->materialName = L"Lamp";
 			break;
 		default:
 			break;
@@ -77,7 +82,7 @@ void TestScene::Init()
 	CreatedObj->AddComp(new MeshRenderer(L"Resources/Mesh/Ground.x", L"Ground Mat"));
 	CreatedObj->transform->position = D3DXVECTOR3(-10000, -10000, -100000);
 	AddObj(CreatedObj);
-	CreatedObj = nullptr;
+	//CreatedObj = nullptr;
 
 	AddObj(Cam);
 	AddObj(ground);
@@ -119,17 +124,20 @@ void TestScene::Update(float deltaTime)
 	{
 		if (ObjButtonList[i]->GetComponent<Button>().OnClick())
 		{
+			isCreating = true;
 			curtype = ObjButtonList[i]->type;
-			if (CreatedObj != nullptr)
-				ObjectManager::Instance()->Destroy(CreatedObj);
-			CreatedObj = ObjectManager::Instance()->Instantiate(curtype, D3DXVECTOR3(0, 0.35f, 0));
+			//if (CreatedObj != nullptr)
+			//	ObjectManager::Instance()->Destroy(CreatedObj);
+			//CreatedObj = ObjectManager::Instance()->Instantiate(curtype, D3DXVECTOR3(0, 0.35f, 0));
+			CreatedObj->GetComponent<MeshRenderer>().Refresh(ObjectManager::Instance()->ObjPathlist.at(curtype),ObjButtonList[i]->materialName);
+			CreatedObj->transform->position = D3DXVECTOR3(0, 0.35f, 0);
 			CreatedObj->name = ObjButtonList[i]->name;
 			CreatedObj->GetComponent<MeshRenderer>().color = { 0.5,0,0.5,1 };
 			cout << "현재 타입: " << curtype << endl;
 		}
 	}
 
-	if (CreatedObj != nullptr)
+	if (isCreating)
 	{
 		MoveSelectedObj(deltaTime);
 		if (DXUTWasKeyPressed(VK_END))
@@ -137,11 +145,20 @@ void TestScene::Update(float deltaTime)
 			// 맨아래 좌표에 맞추는 기능 넣기
 		}
 
+		if (DXUTWasKeyPressed(VK_BACK))
+		{
+			ObjectManager::Instance()->Destroy(CreatedObj);
+		}
+
 		if (DXUTWasKeyPressed(VK_RETURN))
 		{
-			GameObject* obj = new GameObject(CreatedObj);
+			isCreating = false;
+			GameObject* obj = new GameObject();
+			obj->AddComp(new MeshRenderer(CreatedObj->GetComponent<MeshRenderer>().meshPath, CreatedObj->GetComponent<MeshRenderer>().materialName));
+			obj->transform->position = CreatedObj->transform->position;
+			obj->name = CreatedObj->name;
 			obj->GetComponent<MeshRenderer>().color = { 1,1,1,1 };
-			CreatedObj = nullptr;
+			CreatedObj->transform->position = { -10000,-10000,-10000 };
 
 			IngameObject* ingameObj = new IngameObject(obj);
 			ingameObj->GetComponent<Text>().text = obj->name;

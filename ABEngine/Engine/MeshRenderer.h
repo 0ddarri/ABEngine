@@ -24,5 +24,10 @@ public:
 	Material* material;
 
 	D3DXVECTOR4 color;
+
+	wstring meshPath;
+	wstring materialName;
+
+	void Refresh(wstring path, wstring matName);
 };
 

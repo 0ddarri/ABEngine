@@ -11,8 +11,10 @@ GameObject::GameObject()
 
 GameObject::GameObject(GameObject* obj)
 {
-	componentlist = obj->componentlist;
-	transform = obj->transform;
+	componentlist.assign(obj->componentlist.begin(), obj->componentlist.end());
+	componentlist.pop_front();
+	transform = new Transform();
+	componentlist.push_front(transform);
 	name = obj->name;
 	Active = obj->Active;
 }

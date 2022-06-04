@@ -1,6 +1,13 @@
 #include "DXUT.h"
 #include "ObjectManager.h"
 
+void ObjectManager::Initialize()
+{
+	ObjPathlist.emplace(OBJECT_TYPE::WALL_ORIGINAL, L"Resources/Mesh/Wall_Original.x");
+	ObjPathlist.emplace(OBJECT_TYPE::WALL_HOLE, L"Resources/Mesh/Wall_Broken1.x");
+	ObjPathlist.emplace(OBJECT_TYPE::LAMP, L"Resources/Mesh/Lamp.x");
+}
+
 GameObject* ObjectManager::Instantiate(OBJECT_TYPE type, D3DXVECTOR3 pos)
 {
 	GameObject* obj = new GameObject();

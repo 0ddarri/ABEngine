@@ -54,5 +54,7 @@ public:
 	void SetObectButtons();
 	void MoveIngameObj(float deltaTime);
 	void DeleteIngameObj();
+
+	bool isCreating = false;
 };
 

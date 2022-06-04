@@ -6,6 +6,7 @@
 #include "Engine/TextureManager.h"
 #include "Engine/LightManager.h"
 #include "Engine/InputManager.h"
+#include "Engine/ObjectManager.h"
 
 // 시작할 때 한번 실행
 HRESULT CALLBACK OnD3D9CreateDevice( IDirect3DDevice9* pd3dDevice, const D3DSURFACE_DESC* pBackBufferSurfaceDesc, void* pUserContext )
@@ -15,6 +16,7 @@ HRESULT CALLBACK OnD3D9CreateDevice( IDirect3DDevice9* pd3dDevice, const D3DSURF
     TextureManager::Instance()->Initialize();
     MaterialManager::Instance()->Initialize();
     LightManager::Instance()->Initialize();
+    ObjectManager::Instance()->Initialize();
     return S_OK;
 }
 
